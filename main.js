@@ -6,6 +6,8 @@ select.addEventListener('change', setMonth);
 function setMonth() {
 	let choice = select.value;
 
+	month.textContent = choice;
+/*
 	switch(choice){
 		case "January":
 			month.textContent = "January";
@@ -45,5 +47,5 @@ function setMonth() {
 			break;
 		default:
 			month.textContent = "";
-	}
+	}*/
 }
