@@ -1,21 +1,27 @@
 let select = document.querySelector('select');
-let month = document.querySelector('h1');
+let h1 = document.querySelector('h1');
 
-select.addEventListener('change', setMonth);
-
-function setMonth() {
+select.onChange = function() {
 	let choice = select.value;
+	let days = 31;
 
-	month.textContent = choice;
+	if (choice == "February"){
+		days = 28;
+	}
+	if (choice == "April" || choice == "June" || choice == "September" || choice == "November") {
+		days = 30;
+	}
+
+	createCalendar(days, choice);
 }
 
-function createCAlendar(){
-	let days = 31;
-	if (choice == "February")
-		days = 28;
-	if (choice == "April" || choice == "June" || choice == "September" || choice == "November")
-		days = 30;
+function createCalendar(days, choice){
+	h1.textContent = choice;
+
+
 	for (let drawDays = 0; drawDays != days; drawDays++) {
 		
 	}
 }
+
+createCalendar(31, "January");
