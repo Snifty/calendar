@@ -37,7 +37,6 @@ function createCalendar(days, choice){
 			i.setAttribute("id", "today");
 		}*/
 
-
 		if(i % 7 == 0) {
 			let listItem = document.createElement('li');
 			listItem.className = "sunday";
