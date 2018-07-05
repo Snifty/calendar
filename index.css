@@ -11,3 +11,11 @@ li {
 * {
     box-sizing: border-box;
 }
+
+.sunday {
+	background-color: green;
+}
+
+#today {
+	background-attachment: red;
+}
